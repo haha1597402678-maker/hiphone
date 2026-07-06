@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <!-- Background Gradient: Elegant Light Wood -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F2D18B" />
+      <stop offset="100%" stop-color="#D19E41" />
+    </linearGradient>
+
+    <!-- Grid Line Gradient -->
+    <linearGradient id="gridLine" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#BA8129" />
+      <stop offset="100%" stop-color="#9C6B1E" />
+    </linearGradient>
+
+    <!-- Black Stone Glossy Gradient -->
+    <radialGradient id="blackStone" cx="35%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#666666" />
+      <stop offset="40%" stop-color="#2A2A2A" />
+      <stop offset="100%" stop-color="#0A0A0A" />
+    </radialGradient>
+
+    <!-- White Stone Glossy Gradient -->
+    <radialGradient id="whiteStone" cx="35%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="70%" stop-color="#F2F2F2" />
+      <stop offset="100%" stop-color="#D4D4D4" />
+    </radialGradient>
+
+    <!-- Deep Drop Shadow for realistic depth -->
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="4" stdDeviation="3" flood-color="#000000" flood-opacity="0.3" />
+    </filter>
+  </defs>
+
+  <!-- Base Plate -->
+  <rect width="120" height="120" fill="url(#bgGrad)" />
+
+  <!-- Grid Lines (Larger spacing: 30px instead of 20px) -->
+  <!-- 3x3 intersections total -->
+  <g stroke="url(#gridLine)" stroke-width="2.5" stroke-linecap="round" opacity="0.8">
+    <line x1="30" y1="30" x2="30" y2="90" />
+    <line x1="60" y1="30" x2="60" y2="90" />
+    <line x1="90" y1="30" x2="90" y2="90" />
+
+    <line x1="30" y1="30" x2="90" y2="30" />
+    <line x1="30" y1="60" x2="90" y2="60" />
+    <line x1="30" y1="90" x2="90" y2="90" />
+  </g>
+
+  <!-- Center Tengen Dot -->
+  <circle cx="60" cy="60" r="3.5" fill="#9C6B1E" />
+
+  <!-- Stones (Radius 13 -> 26px diameter, leaving 4px gap on 30px grid) -->
+  <g filter="url(#shadow)">
+    <!-- Black at Center -->
+    <circle cx="60" cy="60" r="13" fill="url(#blackStone)" />
+    
+    <!-- White Top Left -->
+    <circle cx="30" cy="30" r="13" fill="url(#whiteStone)" />
+    
+    <!-- Black Bottom Left -->
+    <circle cx="30" cy="90" r="13" fill="url(#blackStone)" />
+    
+    <!-- White Right Middle -->
+    <circle cx="90" cy="60" r="13" fill="url(#whiteStone)" />
+    
+    <!-- Black Bottom Right (Winning move feeling) -->
+    <circle cx="90" cy="90" r="13" fill="url(#blackStone)" />
+  </g>
+
+  <!-- Crisp Highlights for glass-like finish -->
+  <g fill="none" stroke-width="0.75">
+    <circle cx="60" cy="60" r="13" stroke="#FFFFFF" opacity="0.15" />
+    <circle cx="30" cy="30" r="13" stroke="#FFFFFF" opacity="0.6" />
+    <circle cx="30" cy="90" r="13" stroke="#FFFFFF" opacity="0.15" />
+    <circle cx="90" cy="60" r="13" stroke="#FFFFFF" opacity="0.6" />
+    <circle cx="90" cy="90" r="13" stroke="#FFFFFF" opacity="0.15" />
+  </g>
+</svg>
